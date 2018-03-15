@@ -1,0 +1,47 @@
+# Project 4: Text Statistics
+
+* Author: Lucas Marchand
+* Class: CS121 Section 6
+* Semester: Spring 2018
+
+## Overview
+
+Parses a string array of text files and returns statistics on them. Returns the character count, word count, line count, average word length, character frequencies, and word length 
+frequency in the text file(s).
+
+## Compiling and Using
+
+When running the program the text file must be in the same directory as the driver class ProcessText.java. usage of the program from the command line is 
+
+javac ProcessText.java
+java ProcessText [File1] [...[File2],...]
+
+the program will start at File1 and work through the command line arguments until it reaches the end of the arguments and return all the stats to the console for each argument
+
+## Discussion
+
+The hardest part about this was that the I decided to use a hashmap in order to get the character frequencies. It is a data structure that was not gone over in class and may be implemented rather poorly into the program. It does compile and run for now and it does return the correct output. It just took a little finesse in order to get it to work properly (I had to compare the keys back to a string array of the alphabet).
+
+I believe that the lectures and labs easily set up students to be able to parse through text files. I think there is improvement on telling students how to work with the file directory and navigating computer file structures if files exist, how to create them if they dont, how to check sub directories, ect.
+
+## Testing
+
+Testing involved running the multiple text files to make sure that the parsing was working by tokens and by lines. I did not have any stats on if they were correct so I jumped to using the TextStatisticsTest.java class to test the outputs. Once those were all passing I took another step and used the autograde.sh shell script in order to simulate the grading process. Which, by the way worked flawlessly up until it checked to see if I had a README in the directory which I am not completing.
+
+## Extra Credit
+
+not attempted
+
+## Sources used
+
+For how to format output strings and ints to justify in the console:
+
+http://www.javawithus.com/tutorial/displaying-text-using-printf-method
+
+Resources used for learning about hashmaps:
+
+http://www.java67.com/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html
+
+https://www.javatpoint.com/java-hashmap
+
+https://stackoverflow.com/questions/4299728/how-can-i-combine-two-hashmap-objects-containing-the-same-types
